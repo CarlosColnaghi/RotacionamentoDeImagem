@@ -80,7 +80,7 @@ namespace Rotacionamento_de_Imagens
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Location = new System.Drawing.Point(6, 48);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(192, 156);
+            this.groupBox2.Size = new System.Drawing.Size(192, 83);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Rotacionamento";
@@ -90,14 +90,14 @@ namespace Rotacionamento_de_Imagens
             this.button1.Location = new System.Drawing.Point(6, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(192, 23);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Carregar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Location = new System.Drawing.Point(6, 210);
+            this.groupBox4.Location = new System.Drawing.Point(6, 137);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(192, 100);
             this.groupBox4.TabIndex = 4;
@@ -109,7 +109,7 @@ namespace Rotacionamento_de_Imagens
             this.button2.Location = new System.Drawing.Point(6, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 23);
-            this.button2.TabIndex = 0;
+            this.button2.TabIndex = 1;
             this.button2.Text = "Esquerda";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -119,9 +119,10 @@ namespace Rotacionamento_de_Imagens
             this.button3.Location = new System.Drawing.Point(6, 48);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(180, 23);
-            this.button3.TabIndex = 1;
+            this.button3.TabIndex = 2;
             this.button3.Text = "Direita";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 

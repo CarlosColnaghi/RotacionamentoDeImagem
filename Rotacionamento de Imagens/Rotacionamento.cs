@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rotacionamento_de_Imagens
 {
-    public enum Orientacao
+    public enum Rotacionamento
     {
         Esquerda, Direita
     }

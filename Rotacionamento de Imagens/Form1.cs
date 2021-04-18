@@ -29,7 +29,12 @@ namespace Rotacionamento_de_Imagens
 
         private void button2_Click(object sender, EventArgs e)
         {
-            picImagem.Image = Imagem.rotacionar(new Bitmap(picImagem.Image), Orientacao.Esquerda);
+            picImagem.Image = Imagem.rotacionar(new Bitmap(picImagem.Image), Rotacionamento.Esquerda);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            picImagem.Image = Imagem.rotacionar(new Bitmap(picImagem.Image), Rotacionamento.Direita);
         }
     }
 }
