@@ -20,19 +20,20 @@ namespace Rotacionamento_de_Imagens
             {
                 imagemProcessada = new Bitmap(imagemOriginal.Width, imagemOriginal.Height);
             }
-            if(rotacionamento == Rotacionamento.Esquerda)
+            if (rotacionamento == Rotacionamento.Esquerda)
             {
-                for(int i = 0, l = 0; i < imagemOriginal.Height; i++, l++)
+                for (int i = 0, l = 0; i < imagemOriginal.Height; i++, l++)
                 {
-                    for (int j = 0, k = imagemProcessada.Height-1; j < imagemOriginal.Width; j++, k--)
+                    for (int j = 0, k = imagemProcessada.Height - 1; j < imagemOriginal.Width; j++, k--)
                     {
                         Color cor = imagemOriginal.GetPixel(j, i);
                         imagemProcessada.SetPixel(l, k, cor);
                     }
                 }
-            } else if(rotacionamento == Rotacionamento.Direita)
+            }
+            else if (rotacionamento == Rotacionamento.Direita)
             {
-                for (int i = 0, l = imagemProcessada.Width-1; i < imagemOriginal.Height; i++, l--)
+                for (int i = 0, l = imagemProcessada.Width - 1; i < imagemOriginal.Height; i++, l--)
                 {
                     for (int j = 0, k = 0; j < imagemOriginal.Width; j++, k++)
                     {
@@ -47,14 +48,24 @@ namespace Rotacionamento_de_Imagens
         public static Bitmap espelhar(Bitmap imagemOriginal, Espelhamento espelhamento)
         {
             Bitmap imagemProcessada = new Bitmap(imagemOriginal.Width, imagemOriginal.Height);
-            if(espelhamento == Espelhamento.Horizontal)
+            if (espelhamento == Espelhamento.Horizontal)
             {
-                for(int i = 0; i < imagemOriginal.Height; i++)
+                for (int i = 0; i < imagemOriginal.Height; i++)
                 {
-                    for(int j = 0, k = imagemProcessada.Width-1; j < imagemOriginal.Width; j++, k--)
+                    for (int j = 0, k = imagemProcessada.Width - 1; j < imagemOriginal.Width; j++, k--)
                     {
                         Color cor = imagemOriginal.GetPixel(j, i);
                         imagemProcessada.SetPixel(k, i, cor);
+                    }
+                }
+            } else if (espelhamento == Espelhamento.Vertical)
+            {
+                for (int i = 0, l = imagemProcessada.Height-1; i < imagemOriginal.Height; i++, l--)
+                {
+                    for (int j = 0; j < imagemOriginal.Width; j++)
+                    {
+                        Color cor = imagemOriginal.GetPixel(j, i);
+                        imagemProcessada.SetPixel(j, l, cor);
                     }
                 }
             }

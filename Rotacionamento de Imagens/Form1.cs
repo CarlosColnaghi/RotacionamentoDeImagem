@@ -29,17 +29,22 @@ namespace Rotacionamento_de_Imagens
 
         private void button2_Click(object sender, EventArgs e)
         {
-            picImagem.Image = Imagem.rotacionar(new Bitmap(picImagem.Image), Rotacionamento.Esquerda);
+            if(picImagem.Image != null ) picImagem.Image = Imagem.rotacionar(new Bitmap(picImagem.Image), Rotacionamento.Esquerda);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            picImagem.Image = Imagem.rotacionar(new Bitmap(picImagem.Image), Rotacionamento.Direita);
+            if (picImagem.Image != null) picImagem.Image = Imagem.rotacionar(new Bitmap(picImagem.Image), Rotacionamento.Direita);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            picImagem.Image = Imagem.espelhar(new Bitmap(picImagem.Image), Espelhamento.Horizontal);
+            if (picImagem.Image != null) picImagem.Image = Imagem.espelhar(new Bitmap(picImagem.Image), Espelhamento.Horizontal);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (picImagem.Image != null) picImagem.Image = Imagem.espelhar(new Bitmap(picImagem.Image), Espelhamento.Vertical);
         }
     }
 }

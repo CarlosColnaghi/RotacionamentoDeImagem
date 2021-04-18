@@ -54,7 +54,7 @@ namespace Rotacionamento_de_Imagens
             this.groupBox1.Size = new System.Drawing.Size(458, 467);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Imagem Original";
+            this.groupBox1.Text = "Imagem";
             // 
             // picImagem
             // 
@@ -137,6 +137,7 @@ namespace Rotacionamento_de_Imagens
             this.button4.TabIndex = 6;
             this.button4.Text = "Vertical";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -157,8 +158,10 @@ namespace Rotacionamento_de_Imagens
             this.Controls.Add(this.Controle);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Rotacionamento de Imagem";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picImagem)).EndInit();
             this.Controle.ResumeLayout(false);
