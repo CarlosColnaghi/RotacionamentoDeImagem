@@ -44,5 +44,22 @@ namespace Rotacionamento_de_Imagens
             return imagemProcessada;
         }
 
+        public static Bitmap espelhar(Bitmap imagemOriginal, Espelhamento espelhamento)
+        {
+            Bitmap imagemProcessada = new Bitmap(imagemOriginal.Width, imagemOriginal.Height);
+            if(espelhamento == Espelhamento.Horizontal)
+            {
+                for(int i = 0; i < imagemOriginal.Height; i++)
+                {
+                    for(int j = 0, k = imagemProcessada.Width-1; j < imagemOriginal.Width; j++, k--)
+                    {
+                        Color cor = imagemOriginal.GetPixel(j, i);
+                        imagemProcessada.SetPixel(k, i, cor);
+                    }
+                }
+            }
+            return imagemProcessada;
+        }
+
     }
 }

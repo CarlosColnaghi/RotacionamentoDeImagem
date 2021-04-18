@@ -36,5 +36,10 @@ namespace Rotacionamento_de_Imagens
         {
             picImagem.Image = Imagem.rotacionar(new Bitmap(picImagem.Image), Rotacionamento.Direita);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            picImagem.Image = Imagem.espelhar(new Bitmap(picImagem.Image), Espelhamento.Horizontal);
+        }
     }
 }
